@@ -1,0 +1,9 @@
+# Папки
+node_modules/
+dist/
+public/dist/
+
+# Згенеровані файли
+public/app.js
+public/index.js
+
