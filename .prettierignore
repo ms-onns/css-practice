@@ -7,3 +7,5 @@ public/dist/
 public/app.js
 public/index.js
 
+# Ignored
+src/layout

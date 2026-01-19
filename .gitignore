@@ -60,5 +60,10 @@ typings/
 
 package-lock.json
 
-# Environment variables (local secrets)
+# ===============================
+# Environment variables (SECURITY)
+# Never commit real secrets
 .env
+.env.*
+!.env.example
+# ===============================
