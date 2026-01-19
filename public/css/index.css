@@ -3,5 +3,12 @@ html {
 }
 
 body {
-  background: #fff;
+  font-family:
+    'Roboto',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  font-weight: 400;
 }
