@@ -97,5 +97,60 @@ router.get('/flex', function (req, res) {
   })
 })
 
+// ================================================================
+
+router.get('/flex-2', function (req, res) {
+  res.render('pages/flex-2', {
+    layout: 'flex-2',
+    plans: [
+      {
+        name: 'Basic',
+        price: '$0',
+        features: [
+          'Access to core features',
+          'Community support',
+          'Limited storage',
+        ],
+        cta: 'Start free',
+        highlight: false,
+      },
+      {
+        name: 'Pro',
+        price: '$29',
+        features: [
+          'Unlimited projects',
+          'Priority support',
+          'Advanced analytics',
+          'Custom themes',
+        ],
+        cta: 'Upgrade now',
+        highlight: true,
+      },
+      {
+        name: 'Team',
+        price: '$79',
+        features: [
+          'Team collaboration',
+          'Role management',
+          'Shared dashboards',
+        ],
+        cta: 'Contact sales',
+        highlight: false,
+      },
+      {
+        name: 'Enterprise',
+        price: 'Custom',
+        features: [
+          'Dedicated support',
+          'SLA & compliance',
+          'Custom integrations',
+        ],
+        cta: 'Request demo',
+        highlight: false,
+      },
+    ],
+  })
+})
+
 // Підключення роутера до бек-енду
 module.exports = router
