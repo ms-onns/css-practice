@@ -1,0 +1,24 @@
+<div class='dashboard'>
+
+  {{#each widgets}}
+    <div class='widget'>
+
+      <div class='widget-header'>
+        <h3>{{title}}</h3>
+      </div>
+
+      <div class='widget-body'>
+        <p class='value'>{{value}}</p>
+        <span class='trend'>{{trend}}</span>
+      </div>
+
+      <div class='widget-footer'>
+        {{#each actions}}
+          <button>{{this}}</button>
+        {{/each}}
+      </div>
+
+    </div>
+  {{/each}}
+
+</div>

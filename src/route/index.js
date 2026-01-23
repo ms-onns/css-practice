@@ -152,5 +152,51 @@ router.get('/flex-2', function (req, res) {
   })
 })
 
+// ================================================================
+
+router.get('/flex-3', function (req, res) {
+  res.render('pages/flex-3', {
+    layout: 'flex-3',
+    widgets: [
+      {
+        title: 'Revenue',
+        value: '$12,430',
+        trend: '+12%',
+        actions: ['Details'],
+      },
+      {
+        title: 'Users',
+        value: '1,284',
+        trend: '+4%',
+        actions: ['View', 'Export'],
+      },
+      {
+        title: 'Errors',
+        value: '23',
+        trend: '-8%',
+        actions: ['Inspect'],
+      },
+      {
+        title: 'Uptime',
+        value: '99.98%',
+        trend: 'Stable',
+        actions: ['History'],
+      },
+      {
+        title: 'API Requests',
+        value: '245,120',
+        trend: '+32%',
+        actions: ['Logs', 'Limits', 'Docs'],
+      },
+      {
+        title: 'Latency',
+        value: '320ms',
+        trend: 'Warning',
+        actions: ['Analyze'],
+      },
+    ],
+  })
+})
+
 // Підключення роутера до бек-енду
 module.exports = router
