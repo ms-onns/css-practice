@@ -1,0 +1,43 @@
+<h1 class="page-title">{{title}}</h1>
+
+<div class="media-board">
+
+  {{#each cards}}
+    <article class="media-card {{type}} {{#if featured}}is-featured{{/if}}">
+
+      <header class="media-header">
+        <span class="media-type">{{type}}</span>
+
+        {{#if featured}}
+          <span class="badge">Featured</span>
+        {{/if}}
+      </header>
+
+      <div class="media-body">
+        <h2>{{title}}</h2>
+        <p>{{description}}</p>
+      </div>
+
+      {{#if duration}}
+        <div class="media-meta">
+          <span class="duration">{{duration}}</span>
+        </div>
+      {{/if}}
+
+      <footer class="media-footer">
+        <div class="stats">
+          <span>👁 {{stats.views}}</span>
+          <span>❤️ {{stats.likes}}</span>
+        </div>
+
+        <div class="actions">
+          {{#each actions}}
+            <button>{{this}}</button>
+          {{/each}}
+        </div>
+      </footer>
+
+    </article>
+  {{/each}}
+
+</div>

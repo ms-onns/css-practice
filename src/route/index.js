@@ -198,5 +198,62 @@ router.get('/flex-3', function (req, res) {
   })
 })
 
+// ================================================================
+
+router.get('/flex-4', function (req, res) {
+  res.render('pages/flex-4', {
+    layout: 'flex-4',
+    title: 'Media Dashboard',
+    cards: [
+      {
+        type: 'video',
+        title: 'Flexbox Crash Course',
+        description: 'Learn flexbox by building real layouts.',
+        duration: '12:45',
+        stats: { views: '12k', likes: '1.2k' },
+        actions: ['Watch', 'Save'],
+        featured: true,
+      },
+      {
+        type: 'article',
+        title: 'CSS Layout Patterns',
+        description:
+          'Common layout patterns solved with modern CSS techniques.',
+        stats: { views: '8k', likes: '980' },
+        actions: ['Read'],
+        featured: false,
+      },
+      {
+        type: 'podcast',
+        title: 'Frontend Talks #42',
+        description: 'Discussion about layout systems: flexbox vs grid.',
+        duration: '48 min',
+        stats: { views: '3k', likes: '420' },
+        actions: ['Listen', 'Download'],
+        featured: false,
+      },
+      {
+        type: 'video',
+        title: 'Advanced UI Alignment',
+        description: 'Deep dive into tricky alignment problems.',
+        duration: '22:10',
+        stats: { views: '5k', likes: '760' },
+        actions: ['Watch'],
+        featured: false,
+      },
+      {
+        type: 'article',
+        title: 'Design Tokens Explained',
+        description: 'How to build scalable UI systems using CSS variables.',
+        stats: { views: '15k', likes: '2.1k' },
+        actions: ['Read', 'Bookmark'],
+        featured: true,
+      },
+    ],
+  })
+})
+
+// ================================================================
+
 // Підключення роутера до бек-енду
 module.exports = router
