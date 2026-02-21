@@ -255,5 +255,22 @@ router.get('/flex-4', function (req, res) {
 
 // ================================================================
 
+router.get('/', function (req, res) {
+  res.render('pages/index', {})
+
+})
+
+
+
+router.get('/gym', function (req, res) {
+  res.render('pages/gym', {
+    layout: 'gym',
+  })
+
+})
+
+
+
+
 // Підключення роутера до бек-енду
 module.exports = router
