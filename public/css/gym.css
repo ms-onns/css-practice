@@ -1,0 +1,193 @@
+:root body{
+  background-color: #d7d7d7;
+}
+
+.lesson-task-1 h1 {
+  color: blue;
+}
+
+.lesson-task-2 p {
+  color: green;
+}
+
+/* lesson-task-3 */
+#blue {
+  color: blue;
+}
+
+/* lesson-task-4 */
+.box div {
+  background-color: green;
+}
+
+.lesson-task-4 p {
+  background-color: red;
+}
+
+.brown {
+  color: white;
+  background-color: brown;
+}
+
+ul > li { 
+  background-color: red;
+  
+}
+
+.header-button ~ span {
+  background-color: red;
+}
+
+.susid ~ p {
+  background-color: blue;
+  color: white;
+}
+
+.salo, #bread {
+  background-color: yellow;
+}
+
+.lesson-task-10 ul li:first-child {
+  color: white;
+}
+
+.lesson-task-11 li:first-child {
+  color: yellow;
+}
+
+.lesson-task-12 ul:nth-child(2) li:nth-child(2) {
+  background-color: yellow;
+}
+
+.lesson-task-13 ul:last-child li:last-child {
+  background-color: yellow;
+}
+
+.lesson-task-14 ul:last-child li:last-child {
+  color: white;
+}
+
+.lesson-task-15 div:only-child {
+  color: red;
+}
+
+.lesson-task-16 p:first-of-type {
+  background-color: red;
+}
+
+.lesson-task-17 p:last-of-type {
+  background-color: red;
+}
+
+.lesson-task-18 div > p:only-of-type {
+  background-color: yellow;
+}
+
+.lesson-task-19 [href] {
+  color: white;
+}
+
+.lesson-task-20 [value] {
+  color: yellow;
+}
+
+.lesson-task-21 li[value="3"] {
+  background-color: red;
+}
+
+.lesson-task-22 button[class="primary action"] {
+  background-color: blue;
+}
+
+.lesson-task-23 button[class^="secondary"] {
+  background-color: red;
+}
+
+.lesson-task-24 li[class^="b"] {
+  color: green;
+  background-color: white;
+}
+
+.lesson-task-25 li[class*="on"] {
+  background-color: white;
+  color: green;
+}
+
+.lesson-task-26 span[class$="s"] {
+  background-color: white;
+  color: blue;
+}
+
+.lesson-task-27 h2::first-letter {
+  color: red;
+}
+
+.lesson-task-28 p::first-line {
+  background-color: yellow;
+}
+
+.lesson-task-29 input::placeholder {
+  background-color: red;
+  color: white;
+}
+
+.lesson-task-30 li::before {
+  content: "➤";
+}
+
+.lesson-task-31 li::after {
+  content: "➤";
+}
+
+/* lesson-task-32 */
+.btn-action {
+  background-color: blue;
+}
+
+/* lesson-task-32 */
+.btn-action:hover {
+  background-color: orange;
+}
+
+.lesson-task-33 p:not(.safe) {
+  color: red;
+}
+
+.lesson-task-34 li:nth-child(even) {
+  background-color: gray;
+}
+
+.lesson-task-35 input:focus {
+ border: 2px solid blue;
+ outline: none;
+}
+
+.lesson-task-36 p::selection {
+  background-color: yellow;
+}
+
+.lesson-task-37 input:checked + span {
+  font-weight: bold;
+  color: green;
+}
+
+.lesson-task-38 div:empty {
+  height: 20px;
+  background-color: magenta;
+  margin-bottom: 1px;
+}
+
+.lesson-task-39 a[href*="google"] {
+  color: green;
+}
+
+.btn-press:active {
+  transform: scale(0.9);
+}
+
+.lesson-task-41 p:first-of-type::first-letter {
+  color: red;
+  font-size: 1.9rem;
+}
+
+
