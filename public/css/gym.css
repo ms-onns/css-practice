@@ -189,3 +189,107 @@ ul > li {
   color: red;
   font-size: 1.9rem;
 }
+
+.lesson-task-42 .btn:hover {
+  color: red;
+  background-color: yellow;
+}
+
+.lesson-task-43 .link:hover + h1 {
+  background-color: green;
+}
+
+.lesson-task-44 .link:visited {
+  color: yellow;
+}
+
+.lesson-task-45 .link:link {
+  color: red;
+}
+
+.lesson-task-46 .btn:active {
+  background-color: #0056b3; 
+  transform: translateY(2px); 
+  box-shadow: inset 0 3px 5px rgba(0,0,0,0.2); 
+}
+
+.lesson-task-47 .btn:focus {
+  background-color: orange;
+  color: red;
+}
+
+.lesson-task-48 #target:target {
+  color: white;
+  background-color: green;
+}
+
+.lesson-task-49 #checkbox:checked + #target {
+  color: white;
+  background-color: blue;
+}
+
+.lesson-task-50 p:lang(uk) {
+  color: blue;
+}
+
+.lesson-task-51 .form-control:enabled {
+  color: red; 
+  background-color: yellow;
+}
+
+.lesson-task-52 input:disabled {
+  background-color: yellow;
+}
+
+.lesson-task-53 input:read-write {
+  background-color: yellow;
+}
+
+.lesson-task-54 input:read-only {
+  background-color: yellow;
+}
+
+.lesson-task-55 input:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.25); 
+}
+
+.lesson-task-55 input:not(:placeholder-shown):invalid {
+  background-color: #ffeaea;
+  border: 2px solid red;
+  outline: none;
+}
+
+.lesson-task-56 textarea:optional {
+  background-color: #fff0f0; 
+  border: 1px solid #ffcccc;
+}
+
+.lesson-task-57 input:out-of-range {
+  color: red;
+}
+
+.lesson-task-58  input:in-range {
+  color: red;
+}
+
+.lesson-task-59 input:placeholder-shown {
+  background-color: red;
+}
+
+.lesson-task-60 .btn-group:focus-within button:focus {
+  color: white;
+  background-color: yellow;
+}
+
+
+.lesson-task-61 form:has(input:not(:placeholder-shown):invalid) {
+  background-color: #ffdddd; 
+  border: 2px solid red;
+}
+
+.lesson-task-61 form:valid {
+  background-color: #eaffea;
+  border: 2px solid green;
+}
