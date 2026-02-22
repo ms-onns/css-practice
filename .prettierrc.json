@@ -3,7 +3,19 @@
   "singleQuote": true,
   "trailingComma": "all",
   "printWidth": 80,
+  "plugins": [],
   "overrides": [
-    { "files": "*.hbs", "options": { "parser": "glimmer" } }
+    {
+      "files": ["*.hbs"],
+      "options": {
+        "parser": "glimmer"
+      }
+    },
+    {
+      "files": ["*.css"],
+      "options": {
+        "parser": "css"
+      }
+    }
   ]
 }

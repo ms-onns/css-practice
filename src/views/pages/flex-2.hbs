@@ -1,20 +1,20 @@
-<div class="plans">
+<div class='plans'>
 
   {{#each plans}}
-    <div class="plan {{#if highlight}}plan--featured{{/if}}">
+    <div class='plan {{if highlight "plan--featured"}}'>
 
-      <div class="plan-header">
+      <div class='plan-header'>
         <h2>{{name}}</h2>
-        <p class="price">{{price}}</p>
+        <p class='price'>{{price}}</p>
       </div>
 
-      <ul class="plan-features">
+      <ul class='plan-features'>
         {{#each features}}
           <li>{{this}}</li>
         {{/each}}
       </ul>
 
-      <div class="plan-footer">
+      <div class='plan-footer'>
         <button>{{cta}}</button>
       </div>
 

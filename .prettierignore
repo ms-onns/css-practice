@@ -8,4 +8,6 @@ public/app.js
 public/index.js
 
 # Ignored
-src/layout
+# most project files are formatted, layouts are included now
+# (previously this folder was skipped when configs were copied)
+# src/layout <-- removed to allow Prettier to touch .hbs templates

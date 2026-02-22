@@ -1,4 +1,4 @@
-:root body{
+:root body {
   background-color: #d7d7d7;
 }
 
@@ -29,9 +29,8 @@
   background-color: brown;
 }
 
-ul > li { 
+ul > li {
   background-color: red;
-  
 }
 
 .header-button ~ span {
@@ -43,7 +42,8 @@ ul > li {
   color: white;
 }
 
-.salo, #bread {
+.salo,
+#bread {
   background-color: yellow;
 }
 
@@ -91,29 +91,29 @@ ul > li {
   color: yellow;
 }
 
-.lesson-task-21 li[value="3"] {
+.lesson-task-21 li[value='3'] {
   background-color: red;
 }
 
-.lesson-task-22 button[class="primary action"] {
+.lesson-task-22 button[class='primary action'] {
   background-color: blue;
 }
 
-.lesson-task-23 button[class^="secondary"] {
+.lesson-task-23 button[class^='secondary'] {
   background-color: red;
 }
 
-.lesson-task-24 li[class^="b"] {
+.lesson-task-24 li[class^='b'] {
   color: green;
   background-color: white;
 }
 
-.lesson-task-25 li[class*="on"] {
+.lesson-task-25 li[class*='on'] {
   background-color: white;
   color: green;
 }
 
-.lesson-task-26 span[class$="s"] {
+.lesson-task-26 span[class$='s'] {
   background-color: white;
   color: blue;
 }
@@ -132,11 +132,11 @@ ul > li {
 }
 
 .lesson-task-30 li::before {
-  content: "➤";
+  content: '➤';
 }
 
 .lesson-task-31 li::after {
-  content: "➤";
+  content: '➤';
 }
 
 /* lesson-task-32 */
@@ -158,8 +158,8 @@ ul > li {
 }
 
 .lesson-task-35 input:focus {
- border: 2px solid blue;
- outline: none;
+  border: 2px solid blue;
+  outline: none;
 }
 
 .lesson-task-36 p::selection {
@@ -177,7 +177,7 @@ ul > li {
   margin-bottom: 1px;
 }
 
-.lesson-task-39 a[href*="google"] {
+.lesson-task-39 a[href*='google'] {
   color: green;
 }
 
@@ -189,5 +189,3 @@ ul > li {
   color: red;
   font-size: 1.9rem;
 }
-
-
