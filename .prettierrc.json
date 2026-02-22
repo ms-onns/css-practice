@@ -1,21 +1,21 @@
 {
-  "semi": false,
+  "semi": true,
   "singleQuote": true,
   "trailingComma": "all",
   "printWidth": 80,
-  "plugins": [],
+  "tabWidth": 2,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
   "overrides": [
     {
       "files": ["*.hbs"],
-      "options": {
-        "parser": "glimmer"
-      }
+      "options": { "parser": "glimmer" }
     },
     {
       "files": ["*.css"],
-      "options": {
-        "parser": "css"
-      }
+      "options": { "parser": "css" }
     }
   ]
 }

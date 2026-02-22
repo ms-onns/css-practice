@@ -1,18 +1,26 @@
 {
   "env": {
-    "browser": false,
+    "browser": true,
     "node": true,
     "es2021": true
   },
-  // combine basic linting with Prettier integration
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "script"
   },
   "rules": {
-    "no-unused-vars": "warn",
-    "no-undef": "error",
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": true
+      }
+    ],
     "no-console": "off"
   }
 }
