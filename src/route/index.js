@@ -1,7 +1,7 @@
 // Підключення технології express для back-end сервера
-const express = require('express')
+const express = require('express');
 // Cтворення роутера - місце, куди підключено ендпоїнт
-const router = express.Router()
+const router = express.Router();
 
 // ================================================================
 
@@ -10,9 +10,9 @@ const router = express.Router()
 router.get('/', function (req, res) {
   // res.render генерує HTML сторінку
   //            ↙ cюди вводити назву файлу з сontainer
-  res.render('pages/index', {})
+  res.render('pages/index', {});
   //                  ↑↑ сюди вводити JSON дані
-})
+});
 
 // ================================================================
 
@@ -94,8 +94,8 @@ router.get('/flex', function (req, res) {
         actions: ['Configure'],
       },
     ],
-  })
-})
+  });
+});
 
 // ================================================================
 
@@ -149,8 +149,8 @@ router.get('/flex-2', function (req, res) {
         highlight: false,
       },
     ],
-  })
-})
+  });
+});
 
 // ================================================================
 
@@ -195,8 +195,8 @@ router.get('/flex-3', function (req, res) {
         actions: ['Analyze'],
       },
     ],
-  })
-})
+  });
+});
 
 // ================================================================
 
@@ -250,20 +250,41 @@ router.get('/flex-4', function (req, res) {
         featured: true,
       },
     ],
-  })
-})
+  });
+});
 
 // ================================================================
-
-router.get('/', function (req, res) {
-  res.render('pages/index', {})
-})
 
 router.get('/gym', function (req, res) {
   res.render('pages/gym', {
     layout: 'gym',
-  })
-})
+  });
+});
+
+// ================================================================
+
+// ================================================================
+
+router.get('/box', (req, res) => {
+  res.render('pages/box', {
+    layout: 'box',
+    title: 'Box Model Test',
+  });
+});
+
+// ================================================================
+
+router.get('/box-2', (req, res) => {
+  res.render('pages/box-2', {
+    layout: 'box-2',
+    title: 'Box Model Test',
+  });
+});
+// ================================================================
+router.get('/', function (req, res) {
+  res.render('pages/index', {});
+});
+// ================================================================
 
 // Підключення роутера до бек-енду
-module.exports = router
+module.exports = router;
