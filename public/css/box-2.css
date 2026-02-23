@@ -1,0 +1,66 @@
+* body {
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar {
+  background-color: darkgray;
+  width: 350px;
+  box-sizing: border-box;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.knight-card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  min-height: 280px;
+}
+
+.knight-avatar img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.knight-name {
+  text-align: center;
+}
+
+.knight-bio {
+  flex-grow: 1;
+  overflow-y: auto;
+  text-align: center;
+  color: rgb(234, 234, 234);
+}
+.knight-bio::-webkit-scrollbar {
+  width: 4px;
+}
+.knight-bio::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.knight-btn {
+  padding: 0 15px 4px;
+  width: max-content;
+  align-self: center;
+
+  background-color: darkolivegreen;
+  color: lavender;
+  border-radius: 8px;
+  border: none;
+}
+
+.knight-btn:hover {
+  background-color: rgb(112, 143, 58);
+  border: 1px rgb(58, 77, 25);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.knight-btn:active {
+  transform: scale(0.95);
+  background-color: rgb(90, 115, 45);
+}
