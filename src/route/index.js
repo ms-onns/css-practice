@@ -280,6 +280,16 @@ router.get('/box-2', (req, res) => {
     title: 'Box Model Test',
   });
 });
+
+// ================================================================
+
+router.get('/flex-5', (req, res) => {
+  res.render('pages/flex-5', {
+    layout: 'flex-5',
+    title: 'flex box Test',
+  });
+});
+
 // ================================================================
 router.get('/', function (req, res) {
   res.render('pages/index', {});
