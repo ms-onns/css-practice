@@ -18,7 +18,7 @@ router.get('/', function (req, res) {
 
 router.get('/flex', function (req, res) {
   res.render('pages/flex', {
-    layout: 'flex',
+    style: 'flex',
     cards: [
       {
         title: 'Starter Plan',
@@ -101,7 +101,7 @@ router.get('/flex', function (req, res) {
 
 router.get('/flex-2', function (req, res) {
   res.render('pages/flex-2', {
-    layout: 'flex-2',
+    style: 'flex-2',
     plans: [
       {
         name: 'Basic',
@@ -156,7 +156,7 @@ router.get('/flex-2', function (req, res) {
 
 router.get('/flex-3', function (req, res) {
   res.render('pages/flex-3', {
-    layout: 'flex-3',
+    style: 'flex-3',
     widgets: [
       {
         title: 'Revenue',
@@ -202,7 +202,7 @@ router.get('/flex-3', function (req, res) {
 
 router.get('/flex-4', function (req, res) {
   res.render('pages/flex-4', {
-    layout: 'flex-4',
+    style: 'flex-4',
     title: 'Media Dashboard',
     cards: [
       {
@@ -257,7 +257,7 @@ router.get('/flex-4', function (req, res) {
 
 router.get('/gym', function (req, res) {
   res.render('pages/gym', {
-    layout: 'gym',
+    style: 'gym',
   });
 });
 
@@ -267,7 +267,7 @@ router.get('/gym', function (req, res) {
 
 router.get('/box', (req, res) => {
   res.render('pages/box', {
-    layout: 'box',
+    style: 'box',
     title: 'Box Model Test',
   });
 });
@@ -276,7 +276,7 @@ router.get('/box', (req, res) => {
 
 router.get('/box-2', (req, res) => {
   res.render('pages/box-2', {
-    layout: 'box-2',
+    style: 'box-2',
     title: 'Box Model Test',
   });
 });
@@ -285,7 +285,7 @@ router.get('/box-2', (req, res) => {
 
 router.get('/flex-5', (req, res) => {
   res.render('pages/flex-5', {
-    layout: 'flex-5',
+    style: 'flex-5',
     title: 'flex box Test',
   });
 });
