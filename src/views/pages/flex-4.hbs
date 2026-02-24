@@ -3,7 +3,7 @@
 <div class='media-board'>
 
   {{#each cards}}
-    <article class='media-card {{type}} {{if featured "is-featured"}}'>
+    <article class='media-card {{type}} {{#if featured}}is-featured{{/if}}'>
 
       <header class='media-header'>
         <span class='media-type'>{{type}}</span>

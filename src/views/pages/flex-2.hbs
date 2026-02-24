@@ -1,7 +1,7 @@
 <div class='plans'>
 
   {{#each plans}}
-    <div class='plan {{if highlight "plan--featured"}}'>
+    <div class="plan {{#if highlight}}plan--featured{{/if}}">
 
       <div class='plan-header'>
         <h2>{{name}}</h2>
