@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  min-width: 320px;
+}
+
+.product-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.product-card {
+  background-color: #f5f5f5;
+  border: 1px solid rgba(165, 165, 165, 0.847);
+  border-radius: 18px;
+  overflow: hidden;
+  max-width: 520px;
+  width: 100%;
+}
+
+.product-image-box {
+  width: 100%;
+}
+
+.product-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.product-content {
+  padding: 20px;
+}
+
+.product-title {
+  color: #434343;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
+.product-description {
+  color: #767676;
+  margin: 20px 0;
+}
+
+.product-button {
+  background-color: #e6e6e6;
+  padding: 10px 20px;
+  border: 1px solid rgba(182, 182, 182, 0.756);
+  border-radius: 8px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.product-button:hover {
+  background-color: #a5a5a5;
+}
+
+.product-button:active {
+  transform: scale(0.98);
+}
+
+.product-price {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #434343;
+}
+
+.product-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Центруємо кнопку і ціну по вертикалі */
+}
+/* ====================================== */
+/* --- АДАПТИВНІСТЬ --- */
+/* ====================================== */
+
+/* ПЕРЕХІД НА МОБІЛЬНИЙ (600px і нижче) */
+@media (max-width: 600px) {
+  .product-card {
+    width: 90%;
+    border-radius: 12px; /* Це налаштування діятиме аж до 320px */
+  }
+
+  .product-content {
+    padding: 15px; /* Це теж зафіксував один раз */
+  }
+
+  .product-title {
+    font-size: 2.2rem; /* Трохи зменшено, щоб влізало краще */
+    line-height: 1.1;
+  }
+
+  .product-description {
+    text-align: center;
+  }
+
+  .product-space {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .product-title {
+    font-size: 2.4rem;
+  }
+
+  .product-space {
+    flex-direction: column-reverse; /* Міняю місцями ціну та кнопку */
+    gap: 15px;
+    align-items: center; /* ЦЕНТРУЮ КНОПКУ ТА ЦІНУ ПО ЦЕНТРУ КАРТКИ */
+  }
+
+  .product-price {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .product-button {
+    width: 100%; /* На малій ширині кнопка на всю ширину - це зручно */
+    max-width: 250px;
+  }
+}
