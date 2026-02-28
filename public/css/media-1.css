@@ -1,0 +1,221 @@
+body {
+  margin: 0; /* Прибираю дефолтні відступи браузера, щоб не було зайвих щілин */
+  padding: 40px; /* Відступ від країв вікна на ПК, щоб контент не "липнув" до монітора */
+  background-color: #728fc8;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  width: 100%; /* Тіло сайту займає всю доступну ширину */
+  min-width: 320px;
+
+  /* [ВАЖЛИВО] box-sizing: border-box — це база. 
+     Він каже браузеру: "якщо я додав padding, не розширюй блок, а втисни контент всередину". 
+     Без нього верстка розлітається. */
+  box-sizing: border-box;
+
+  /* Плавна зміна відступів переходу з ПК на моб */
+  transition: padding 0.3s ease;
+}
+
+/* ГОЛОВНА СЕКЦІЯ (Темний блок) */
+.movie-section {
+  background-color: #1a1c20;
+  padding: 20px; /* Внутрішній простір темного блока */
+  border-radius: 18px;
+
+  /* [ГУМОВІСТЬ] 
+     Змінив на width: 100%, щоб секція адекватно працювала з 6-ма картками. 
+     max-width: 1400px - обмежую розтягування на дуже великих моніторах. */
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; /* Класичний спосіб центрування блока по горизонталі */
+
+  display: flex;
+  flex-direction: column; /* Заголовок і сітка фільмів стоять один під одним */
+}
+
+.section-title {
+  width: 100%; /* Займає весь рядок, виштовхуючи картки вниз */
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* КНОПКА-ЗАГОЛОВОК */
+.movie-button {
+  text-decoration: none;
+  color: #b1b1b1;
+  padding-left: 8px;
+
+  /* [ПЛАВНІСТЬ] Transition тут - щоб колір повертався плавно, коли прибрано курсор. 
+     ease - це режим "м'якого" старту і фінішу анімації. */
+  transition: color 0.4s ease;
+}
+
+.movie-button:hover {
+  color: rgb(238, 184, 22);
+}
+
+.bi-camera-reels {
+  color: #e3e3e3;
+  font-size: larger;
+}
+
+/* СІТКА КАРТОК (Flexbox) */
+.movie-flex {
+  display: flex;
+  /* flex-wrap дозволяє карткам перестрибувати на новий рядок на телефонах */
+  flex-wrap: wrap;
+  gap: 20px; /* Відстань між кожною карткою */
+  justify-content: flex-start; /* Картки шикуються зліва направо */
+}
+
+/* КАРТКА ФІЛЬМУ (Логіка на 6 штук) */
+.movie-card {
+  /* [МАТЕМАТИКА 6 КАРТОК] 
+     100% / 6 = 16.66%. 
+     17px - це компенсація gap (20px), щоб всі 6 влізли в один ряд і не тіснилися. */
+  width: calc(16.66% - 17px);
+  min-width: 0; /* Дозволяю картці стискатися максимально (гумовість) */
+  display: flex;
+  flex-direction: column;
+}
+
+/* КОНТЕЙНЕР ПОСТЕРА (Зафіксував форму) */
+.poster-container {
+  /* position: relative робить цей блок "батьком-якорем" для оверлея Play */
+  position: relative;
+  width: 100%;
+
+  /* aspect-ratio - тримає пропорції 2:3. Тепер постер сам вираховує висоту. */
+  aspect-ratio: 2 / 3;
+
+  /* overflow: hidden - обрізає кути у всього, що всередині (картинка, оверлей) */
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Картинка заповнює весь простір без "сплющування" */
+}
+
+/* ОВЕРЛЕЙ (Темна пелена при наведенні) */
+.movie-overlay {
+  /* position: absolute відриває блок і кладе поверх картинки */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Напівпрозорий чорний */
+
+  /* Центрую іконку Play точно посередині оверлея */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0; /* Початково оверлей невидимий */
+  transition: opacity 0.3s ease; /* Плавна поява затемнення */
+}
+
+/* Ефект наведення на КАРТКУ - оверлей з'являється */
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  font-size: 5em; /* Розмір іконки Play */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ІНФОРМАЦІЯ ПІД ПОСТЕРОМ */
+.movie-info {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.title-ua {
+  font-size: 1.1rem;
+  margin: 0;
+  text-align: center;
+  color: #e3e3e3;
+
+  /* [ТРИ КРАПКИ] Якщо назва дуже довга, вона не ламає сітку, а ховається */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-en {
+  font-size: 0.75rem;
+  color: #b1b1b1;
+  text-align: center;
+  margin-top: 4px;
+
+  /* letter-spacing - додано "повітря" між літерами для стилю */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================ */
+/* МЕДІА-ЗАПИТИ (АДАПТАЦІЯ) */
+/*   ========================================================== */
+
+/* [ПЛАНШЕТНИЙ РЕЖИМ: 760px] 
+   На цій позначці прибирано відступи, щоб притиснути контент до країв */
+@media (max-width: 760px) {
+  body {
+    padding: 0 0 20px 0; /* Зверху і з боків 0, щоб не було дірок */
+  }
+
+  .movie-section {
+    margin-top: 0;
+    border-radius: 0; /* Прямі кути виглядають краще на весь екран */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .title-ua {
+    font-size: 0.95rem; /* Зменшую текст, бо картки стиснулися */
+  }
+
+  .title-en {
+    letter-spacing: 1px; /* Зменшую інтервал, щоб текст не обрізався завчасно */
+    font-size: 0.7rem;
+  }
+}
+
+/* [МОБІЛЬНИЙ РЕЖИМ: 590px] 
+   Тут 6 карток вже не влізуть, тому роблю перешиковку у 2 ряди */
+@media (max-width: 590px) {
+  .movie-flex {
+    justify-content: center; /* Центрую дві картки на екрані */
+    gap: 15px;
+  }
+
+  .movie-card {
+    /* 50% - 8px (половина гепа) = рівно 2 картки в ряд */
+    width: calc(50% - 8px);
+  }
+
+  .title-ua {
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+
+  .play-icon {
+    font-size: 2.5rem; /* Менший Play для меншого постера */
+  }
+
+  .title-en {
+    /* Перевірив, щоб класи не вкладалися один в одного */
+    letter-spacing: 0.5px;
+    font-size: 0.65rem;
+  }
+}

@@ -291,6 +291,63 @@ router.get('/flex-5', (req, res) => {
 });
 
 // ================================================================
+
+router.get('/media-test', (req, res) => {
+  res.render('pages/media-test', {
+    style: 'media-test',
+    // Дані для нашої товарної картки
+    product: {
+      name: 'Samsung Galaxy S25 Ultra',
+      description:
+        'Найпотужніший флагман 2025 року. Титановий корпус, вбудований S Pen та революційна камера 200 Мп з інтелектуальним зумом.',
+      price: '54 999 грн',
+      image: 'https://picsum.photos/seed/s25/600/500', // Рандомна картинка техніки
+      buttonText: 'Купити зараз',
+    },
+  });
+});
+// ================================================================
+
+router.get('/media-1', (req, res) => {
+  res.render('pages/media-1', {
+    style: 'media-1',
+    movies: [
+      {
+        title_ua: 'Інтерстеллар',
+        title_en: 'Interstellar',
+        poster: 'https://picsum.photos/200/300?random=1',
+      },
+      {
+        title_ua: 'Аватар',
+        title_en: 'Avatar',
+        poster: 'https://picsum.photos/200/300?random=2',
+      },
+      {
+        title_ua: 'Матриця',
+        title_en: 'The Matrix',
+        poster: 'https://picsum.photos/200/300?random=3',
+      },
+      {
+        title_ua: 'Месники',
+        title_en: 'The Avengers',
+        poster: 'https://picsum.photos/200/300?random=4',
+      },
+      {
+        title_ua: 'Початок',
+        title_en: 'Inception',
+        poster: 'https://picsum.photos/200/300?random=5',
+      },
+
+      {
+        title_ua: 'Гаррі Поттер',
+        title_en: 'Harry Potter',
+        poster: 'https://picsum.photos/200/300?random=6',
+      },
+    ],
+  });
+});
+
+// ================================================================
 router.get('/', function (req, res) {
   res.render('pages/index', {});
 });
