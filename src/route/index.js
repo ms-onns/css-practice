@@ -348,6 +348,14 @@ router.get('/media-1', (req, res) => {
 });
 
 // ================================================================
+
+router.get('/header-test', (req, res) => {
+  res.render('pages/header-test', {
+    style: 'header-test',
+  });
+});
+
+// ================================================================
 router.get('/', function (req, res) {
   res.render('pages/index', {});
 });

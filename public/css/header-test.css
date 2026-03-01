@@ -1,0 +1,208 @@
+/* 1. Глобальні налаштування */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  font-family: sans-serif; /* Додав базовий шрифт для порядку */
+}
+
+/* 2. Шапка (Header) */
+.header {
+  background-color: #0e4637;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Логотип */
+.logo-link {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #7cd9b4;
+  white-space: nowrap;
+}
+
+.logo-accent {
+  color: #eefbf5;
+}
+
+/* Пошук */
+.header-search {
+  display: flex;
+  align-items: center;
+  background-color: #116b51;
+  border-radius: 12px;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #1a8a6a;
+}
+
+.search-input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #afebcf;
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+.search-input::placeholder {
+  color: #afebcf;
+  font-size: 1.1rem;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  color: #afebcf;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  padding-left: 10px;
+  transition: color 0.3s;
+}
+
+.search-button:hover {
+  color: #eefbf5;
+}
+
+/* Кнопки */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-login,
+.btn-register {
+  background-color: #3db78a;
+  color: #eefbf5;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+  background-color: #116b51;
+  border-color: #7cd9b4;
+  transform: translateY(-1px);
+}
+
+.btn-login:active,
+.btn-register:active {
+  transform: scale(0.98);
+}
+
+/* 3. Контент */
+.content-main {
+  background-color: #f4fdf9;
+  padding: 40px 0;
+  min-height: 200vh;
+}
+
+.content-main-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-main-container h1,
+.content-main-container p {
+  color: #072720;
+  margin-bottom: 20px;
+}
+
+/* 4. Адаптивність */
+
+/* Планшети та великі телефони */
+@media (max-width: 670px) {
+  .header-container {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .header-logo {
+    flex: 1;
+    order: 1;
+  }
+
+  .header-actions {
+    order: 2;
+  }
+
+  .header-search {
+    order: 3;
+    max-width: 100%; /* Пошук на всю ширину */
+  }
+
+  .logo-link {
+    font-size: 1.4rem;
+  }
+
+  .btn-login,
+  .btn-register {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Маленькі телефони */
+@media (max-width: 390px) {
+  .header {
+    position: static; /* Вимикаємо липкість для зручності */
+  }
+
+  .header-container {
+    flex-direction: column;
+  }
+
+  .header-logo {
+    text-align: center;
+  }
+
+  .header-search {
+    order: 1; /* Пошук піднімається вище кнопок */
+  }
+
+  .header-actions {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-login,
+  .btn-register {
+    flex: 1;
+    text-align: center;
+  }
+
+  .content-main {
+    padding-top: 20px; /* Повертаємо стандартний відступ */
+  }
+}
