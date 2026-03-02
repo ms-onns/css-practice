@@ -1,0 +1,23 @@
+<main class='content-main'>
+  <section class='content-main-container'>
+
+    <div class='product-flex'>
+      {{#each products}}
+        <div class='product-card'>
+          <div class='badge badge-{{badge.type}}'>{{badge.text}}</div>
+
+          <div class='product-img'>
+            <img src='{{img}}' alt='{{name}}' />
+          </div>
+
+          <div class='product-info'>
+            <h3 class='price'>{{name}}</h3>
+            <p class='description'>{{price}}</p>
+            <button class='btn-buy'>Купити</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+  </section>
+</main>
