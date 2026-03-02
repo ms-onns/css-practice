@@ -356,6 +356,79 @@ router.get('/header-test', (req, res) => {
 });
 
 // ================================================================
+
+router.get('/tech-store-1', function (req, res) {
+  res.render('pages/tech-store-1', {
+    style: 'tech-store-1',
+    products: [
+      {
+        id: 1,
+        name: 'iPhone 15 Pro',
+        price: '45 000 ₴',
+        img: 'https://picsum.photos/300/300?random=1',
+        badge: { type: 'hot', text: 'HOT' },
+      },
+      {
+        id: 2,
+        name: 'MacBook Air M2',
+        price: '52 000 ₴',
+        img: 'https://picsum.photos/300/300?random=2',
+        badge: { type: 'new', text: 'NEW' },
+      },
+      {
+        id: 3,
+        name: 'AirPods Max',
+        price: '22 000 ₴',
+        img: 'https://picsum.photos/300/300?random=3',
+        badge: { type: 'sale', text: '-15%' },
+      },
+    ],
+  });
+});
+
+// ================================================================
+
+router.get('/tech-store-2', function (req, res) {
+  res.render('pages/tech-store-2', {
+    style: 'tech-store-2',
+    products: [
+      {
+        id: 1,
+        name: 'iPhone 15 Pro',
+        price: '45 000 ₴',
+        img: 'https://picsum.photos/300/400?random=1',
+        badgeText: 'Hot',
+        badgeClass: 'hot',
+      },
+      {
+        id: 2,
+        name: 'MacBook Air M2',
+        price: '52 000 ₴',
+        img: 'https://picsum.photos/300/400?random=2',
+        badgeText: 'New',
+        badgeClass: 'new',
+      },
+      {
+        id: 3,
+        name: 'AirPods Max',
+        price: '22 000 ₴',
+        img: 'https://picsum.photos/300/400?random=3',
+        badgeText: '-15%',
+        badgeClass: 'sale',
+      },
+      {
+        id: 4,
+        name: 'Sony PS5',
+        price: '24 500 ₴',
+        img: 'https://picsum.photos/300/400?random=4',
+        badgeText: 'Top',
+        badgeClass: 'top',
+      },
+    ],
+  });
+});
+
+// ================================================================
 router.get('/', function (req, res) {
   res.render('pages/index', {});
 });
