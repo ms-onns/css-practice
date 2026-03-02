@@ -1,0 +1,27 @@
+<section class='content-main-container'>
+  <div class='product-flex'>
+    {{#each products}}
+      <div class='product-card'>
+
+        <div class='badge {{badgeClass}}'>
+          {{badgeText}}
+        </div>
+
+        <div class='product-img-container'>
+          <img src='{{img}}' alt='{{name}}' class='product-img' />
+
+          <div class='product-overlay'>
+            <button class='btn-quick-view'>Швидкий перегляд</button>
+          </div>
+        </div>
+
+        <div class='product-info'>
+          <p class='description'>{{name}}</p>
+          <p class='price'>{{price}}</p>
+          <button class='btn-buy'>До кошика</button>
+        </div>
+
+      </div>
+    {{/each}}
+  </div>
+</section>
