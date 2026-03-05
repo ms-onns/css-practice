@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===================================================
+   СІТКА 1: СКЕЛЕТ СТОРІНКИ (Зовнішній Grid)
+=================================================== */
+.page-layout {
+  display: grid;
+
+  /* Нарізаємо сторінку: ліва колонка (Сайдбар) жорстко 200px, права (Main) забирає всю решту */
+  grid-template-columns: 200px 1fr;
+
+  /* Висота рядків: Header (по контенту), Main (розтягується), Footer (по контенту) */
+  grid-template-rows: auto 1fr auto;
+
+  /* Гарантуємо, що сторінка завжди на весь екран, щоб Footer не підстрибував угору */
+  min-height: 100vh;
+  gap: 20px;
+
+  /* Малюємо візуальну карту сторінки за допомогою вигаданих імен (зон) */
+  grid-template-areas:
+    'header header'
+    'sidebar main'
+    'footer footer';
+}
+
+/* Прив'язуємо конкретні блоки до імен зон на нашій карті */
+.area-header {
+  grid-area: header;
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+.area-sidebar {
+  grid-area: sidebar;
+  background: #ddd;
+  padding: 20px;
+}
+.area-main {
+  grid-area: main;
+  padding: 20px;
+}
+.area-footer {
+  grid-area: footer;
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+
+/* ===================================================
+   СІТКА 2: КАРТКИ ТОВАРІВ (Внутрішній Grid усередині Main)
+=================================================== */
+.shop-grid {
+  display: grid;
+
+  /* Батько нарізає простір: створюємо 6 рівних колонок */
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+/* Стандартна картка (Слухняна дитина) */
+.card {
+  /* ПРАВИЛО: Розміром дітей керуємо через grid-column / grid-row (а не template!) */
+  grid-column: span 1; /* Займає 1 клітинку (стандартна поведінка) */
+
+  /* grid-row: span 2; (Можна розкоментувати, якщо треба витягнути картку вниз на 2 ряди) */
+
+  background: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Велика картка (Порушник правил) */
+.featured {
+  /* Кажемо цій картці проігнорувати стандартний розмір і розтягнутися на 4 клітинки вшир */
+  grid-column: span 4;
+  /* grid-row: span 4; */
+  background: #ffc107;
+  color: black;
+}
