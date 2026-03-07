@@ -1,5 +1,4 @@
 <html lang='uk'>
-  {{! Змінив на uk, бо контент українською }}
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -16,26 +15,19 @@
       rel='stylesheet'
     />
 
-    {{! Normalize (залишаємо для чистоти експерименту) }}
+    {{! Normalize (залишаємо, щоб обнулити відступи браузера по замовчуванню) }}
     <link
       rel='stylesheet'
       href='https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css'
     />
 
-    {{! Bootstrap 5.3.3 }}
-    <link
-      href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'
-      rel='stylesheet'
-      crossorigin='anonymous'
-    />
-
-    {{! Font Awesome 6 (Переніс у Head для швидкого завантаження іконок) }}
+    {{! Font Awesome 6 (Залишаємо для іконок) }}
     <script
       src='https://kit.fontawesome.com/4a7d77f2b4.js'
       crossorigin='anonymous'
     ></script>
 
-    {{! Твої динамічні стилі — завжди в самому кінці, щоб вони могли "перебивати" Bootstrap }}
+    {{! Твої динамічні стилі }}
     {{#if style}}
       <link rel='stylesheet' href='/css/{{style}}.css' />
     {{else}}
@@ -44,10 +36,8 @@
   </head>
 
   <body>
+
     {{{body}}}
-    {{! Bootstrap JS (якщо знадобиться для кнопок або модалок) }}
-    <script
-      src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'
-    ></script>
+
   </body>
 </html>
